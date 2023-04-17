@@ -1,0 +1,25 @@
+server:
+  port: 9010
+
+
+spring:
+  application:
+    name: ratel-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          # 与服务注册与发现组件结合，设置为 true 后；id默认为微服务名称xxx-server；gateway-application有feign自动做负载均衡;
+          #不需要定制化显式配置；已生成默认的id=xservice,uri: lb://xserver , path=/serviceId/**
+          enabled: true
+      httpclient:
+        connect-timeout: 1800000
+        response-timeout: 1800000
+
+knife4j:
+  enable: false
+# 生产环境必须设置true,进行关闭
+  production: true

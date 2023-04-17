@@ -1,0 +1,16 @@
+server:
+  port: 9020
+
+
+spring:
+  application:
+    name: ratel-goods
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+knife4j:
+  enable: true
+  # 生产环境必须设置true,进行关闭
+  production: false

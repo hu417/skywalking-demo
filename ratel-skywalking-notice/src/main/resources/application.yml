@@ -1,0 +1,10 @@
+#server:
+#  port: 9040
+
+#spring:
+#  application:
+#    name: ratel-notice
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
